@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Lost And Found</title>
+
+    <!-- BOOTSRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div>
+      <!-- <main class="container bg-info-subtle h-"> -->
+      <nav class="bg-info-subtle">
+        <div
+          class="py-1 container d-flex justify-content-between align-items-center"
+        >
+          <div class="d-flex align-items-center">
+            <img src="./assets/dog-logo.png" class="logo" alt="logo" />
+            <h3 class="fw-bold logo-title">Found Pet</h3>
+          </div>
+
+          <div class="d-none d-md-flex align-items-center">
+            <a
+              href="#"
+              class="px-2 text-decoration-none fs-6 fw-semibold navlink"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="px-2 text-decoration-none fs-6 fw-semibold navlink"
+              >Found a Pet</a
+            >
+            <a
+              href="#"
+              class="px-2 text-decoration-none fs-6 fw-semibold navlink"
+              >Lost a Pet</a
+            >
+            <a href="#" class="text-decoration-none fs-6 fw-semibold nav-login"
+              >Log In</a
+            >
+          </div>
+
+          <div class="d-md-none d-flex align-items-center gap-3">
+            <i class="bi bi-search nav-icon"></i>
+
+            <i class="bi bi-list nav-icon"></i>
+          </div>
+        </div>
+      </nav>
+
+      <!-- MOBILE SEARCH-->
+      <header class="pet-search-wrapper d-block d-lg-none">
+        <div class="py-4">
+          <div class="container d-flex gap-4 pet-search">
+            <!-- dropdown -->
+            <div class="dropdown">
+              <button
+                class="btn dropdown-toggle bg-light"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span><i class="bi bi-geo-alt"></i></span> Select Location
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Mamatid</a></li>
+                <li><a class="dropdown-item" href="#">Baclaran</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Pulo</a>
+                  <a class="dropdown-item" href="#">San Isidro</a>
+                </li>
+              </ul>
+            </div>
+
+            <input
+              type="search"
+              name="search"
+              id=""
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-lg"
+              placeholder="Enter your keyword here..."
+            />
+
+            <!-- <button type="submit" class="btn fw-semibold px-4">Find Pet</button> -->
+          </div>
+        </div>
+      </header>
+
+      <!-- SEARCH LG SCREEN-->
+      <header class="pet-search-wrapper d-none d-lg-block">
+        <div class="py-4">
+          <div class="container d-flex gap-4 pet-search">
+            <!-- dropdown -->
+            <div class="dropdown">
+              <button
+                class="btn btn-lg dropdown-toggle bg-light"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span><i class="bi bi-geo-alt"></i></span> Select Location
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Mamatid</a></li>
+                <li><a class="dropdown-item" href="#">Baclaran</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Pulo</a>
+                  <a class="dropdown-item" href="#">San Isidro</a>
+                </li>
+              </ul>
+            </div>
+
+            <input
+              type="search"
+              name="search"
+              id=""
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-lg"
+              placeholder="Enter your keyword here..."
+            />
+
+            <button type="submit" class="btn btn-lg fw-semibold px-4">
+              Find Pet
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- CATEGORY FILTER -->
+      <section class="py-4">
+        <div class="container align-items-center">
+          <div class="row gap-2">
+            <div class="category-card pt-2 col d-flex align-items-center gap-3">
+              <figure class="category-img rounded-circle">
+                <img
+                  src="./assets/pet-category/category-dog.svg"
+                  alt="category"
+                />
+              </figure>
+              <article>
+                <h5 class="fw-medium category-text">Dogs</h5>
+                <span class="category-text">(10)</span>
+              </article>
+            </div>
+
+            <div class="category-card pt-2 col d-flex align-items-center gap-3">
+              <figure class="category-img rounded-circle">
+                <img
+                  src="./assets/pet-category/category-cats.svg"
+                  alt="category"
+                />
+              </figure>
+              <article>
+                <h5 class="fw-medium pt-2 category-text">Cats</h5>
+                <span class="category-text">(10)</span>
+              </article>
+            </div>
+
+            <div class="category-card pt-2 col d-flex align-items-center gap-3">
+              <figure class="category-img rounded-circle">
+                <img
+                  src="./assets/pet-category/category-birds.svg"
+                  alt="category"
+                />
+              </figure>
+              <article>
+                <h5 class="fw-medium category-text">Birds</h5>
+                <span class="category-text">(10)</span>
+              </article>
+            </div>
+
+            <div class="category-card pt-2 col d-flex align-items-center gap-3">
+              <figure class="category-img rounded-circle">
+                <img
+                  src="./assets/pet-category/category-hen.svg"
+                  alt="category"
+                />
+              </figure>
+              <article>
+                <h5 class="fw-medium category-text">Hens</h5>
+                <span class="category-text">(10)</span>
+              </article>
+            </div>
+
+            <div class="category-card pt-2 col d-flex align-items-center gap-3">
+              <figure class="category-img rounded-circle">
+                <img
+                  src="./assets/pet-category/category-rabbit.svg"
+                  alt="category"
+                />
+              </figure>
+              <article>
+                <h5 class="fw-medium category-text">Rabbits</h5>
+                <span class="category-text">(10)</span>
+              </article>
+            </div>
+
+            <div class="category-card pt-2 col d-flex align-items-center gap-3">
+              <figure class="category-img p-2 rounded-circle">
+                <img
+                  src="./assets/pet-category/category-others.svg"
+                  alt="category"
+                />
+              </figure>
+              <article>
+                <h5 class="fw-medium category-text">Others</h5>
+                <span class="category-text">(10)</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BREAD CRUMS -->
+      <!-- <nav
+        class="py-3"
+        style="--bs-breadcrumb-divider: '>'; background-color: #f6f9f9"
+        aria-label="breadcrumb"
+      >
+        <ol class="breadcrumb container px-2">
+          <li class="breadcrumb-item">
+            <a href="#" class="text-decoration-none">Home</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+      </nav> -->
+
+      <!-- <section class="d-flex gap-4 container">
+        <aside>Sidebar</aside>
+
+        <div>Cards</div>
+      </section> -->
+
+      <!-- PETS SECTION -->
+      <section class="container">
+        <div class="pets-card-wrapper">
+          <div
+            class="pet-card border border-1 border-info-subtle rounded-4 overflow-hidden"
+          >
+            <figure class="" style="height: 10rem; width: 100%">
+              <img src="./assets/cat.jpg" alt="pet" class="h-100 w-100" />
+            </figure>
+
+            <article
+              class="d-flex gap-2 px-2 pt-1 pb-4"
+              style="background-color: #f5f7f8"
+            >
+              <div>
+                <h6 class="fw-semibold">Name :</h6>
+                <h6 class="fw-semibold">Breed :</h6>
+                <h6 class="fw-semibold">Age :</h6>
+                <h6 class="fw-semibold">Gender :</h6>
+                <h6 class="fw-semibold">Location :</h6>
+                <h6 class="fw-semibold">Reward :</h6>
+                <h6 class="fw-semibold">Description :</h6>
+              </div>
+              <div class="fw-light text-muted">
+                <h6 class="description-truncate">Oroe</h6>
+                <h6 class="description-truncate">Golden Retriever</h6>
+                <h6 class="description-truncate">2 yrs old</h6>
+                <h6 class="description-truncate">Male</h6>
+                <h6 class="description-truncate">Mamatid</h6>
+                <h6 class="description-truncate">$10,000</h6>
+                <h6 class="description-truncate">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Deleniti, distinctio.
+                </h6>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <nav aria-label="..." class="d-flex justify-content-center py-4">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- </main> -->
+    </div>
+
+    <script>
+      const Card = () => {
+        return `
+          <div
+             class="pet-card border border-1 border-info-subtle rounded-4 overflow-hidden"
+           >
+             <figure class="" style="height: 10rem; width: 100%">
+               <img src="./assets/cat.jpg" alt="pet" class="h-100 w-100" />
+             </figure>
+
+             <article
+               class="d-flex gap-2 px-2 pt-1 pb-4"
+               style="background-color: #f5f7f8"
+             >
+               <div>
+                 <h6 class="fw-semibold">Name :</h6>
+                 <h6 class="fw-semibold">Breed :</h6>
+                 <h6 class="fw-semibold">Age :</h6>
+                 <h6 class="fw-semibold">Gender :</h6>
+                 <h6 class="fw-semibold">Location :</h6>
+                 <h6 class="fw-semibold">Reward :</h6>
+                 <h6 class="fw-semibold">Description :</h6>
+               </div>
+               <div class="fw-light text-muted">
+                 <h6>Oroe</h6>
+                 <h6>Golden Retriever</h6>
+                 <h6>2 yrs old</h6>
+                 <h6>Male</h6>
+                 <h6>Mamatid</h6>
+                 <h6>$10,000</h6>
+                 <h6 class="description-truncate">
+                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                   Deleniti, distinctio.
+                 </h6>
+               </div>
+             </article>
+           </div>
+         
+        `;
+      };
+
+      let displayCard = "";
+      for (let i = 0; i < 20; i++) {
+        displayCard += Card();
+      }
+      document.querySelector(".pets-card-wrapper").innerHTML = displayCard;
+    </script>
+  </body>
+</html>
